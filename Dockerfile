@@ -1,3 +1,7 @@
+FROM registry.szcasic.com/nodejs/nodejs:7.0.0 as build
+
+RUN cnpm install && cnpm run build
+
 # 标明该镜像是基于 nginx:latest 镜像而构建的
 FROM nginx:latest
 
